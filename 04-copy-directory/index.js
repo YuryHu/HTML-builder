@@ -12,7 +12,9 @@ async function copyDir(oldDirPath, newDirPath) {
       console.error('Destination directory exists and canot be deleted', e);
       return;
     }
-  } catch {}
+  } catch {
+    console.log('');
+  }
 
   fs.mkdir(newDirPath, (err2) => {
     if (err2) {
